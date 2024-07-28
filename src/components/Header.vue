@@ -10,7 +10,7 @@
                 <router-link to="/" class="text-white">메인화면</router-link>
               </li>
               <li>
-                <router-link to="/orders" class="text-white">주문내역</router-link>
+                <router-link to="/orders" class="text-white" v-if="$store.state.account.id">주문내역</router-link>
               </li>
               <li>
                 <router-link to="/login" class="text-white" v-if="!$store.state.account.id">로그인</router-link>
